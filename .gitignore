@@ -1,0 +1,35 @@
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Bytecode & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# MLflow
+mlruns/
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment Variables & Secrets
+.env
+.env.local
+
+# OS Specific
+.DS_Store
+Thumbs.db
+
+# Notebooks & Scratch
+reviewplus.ipynb
+.ipynb_checkpoints/
+
+# Datasets & Generated Data Artifacts
+data/raw/
+data/processed/
+data/*.csv
+data/*.json
+!data/.gitkeep
