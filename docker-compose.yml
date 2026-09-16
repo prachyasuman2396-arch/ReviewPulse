@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  reviewpulse-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: reviewpulse-api
+    restart: unless-stopped
+    ports:
+      - "80:8000"       # Expose directly on HTTP port 80 for easy access
+      - "8000:8000"     # Also available on port 8000
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
