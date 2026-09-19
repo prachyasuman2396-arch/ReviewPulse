@@ -32,6 +32,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(PACKAGE_DIR, "..")))
 try:
     from reviewpulse.preprocessing import TextCleaner, load_and_prepare_data
 except ModuleNotFoundError:
+    # pyrefly: ignore [missing-import]
     from preprocessing import TextCleaner, load_and_prepare_data
 
 
